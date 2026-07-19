@@ -17,7 +17,7 @@ function openCard() {
   // Phát nhạc khi mở thiệp
   if (bgMusic && !isSoundMuted) {
     bgMusic.volume = 0.5; // Âm lượng 50%
-    bgMusic.currentTime = 0; // Reset về đầu
+    bgMusic.currentTime = 42; // Bắt đầu từ giây 42
     bgMusic.play().catch((e) => console.log("Không thể phát nhạc:", e));
   }
 }

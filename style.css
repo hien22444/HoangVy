@@ -40,11 +40,15 @@ body {
 }
 
 .tagline {
-    font-size: 24px;
+    font-family: 'Letterena Studios', 'Cormorant Garamond', 'Playfair Display', cursive;
+    max-width: 620px;
+    margin: 0 auto 30px;
+    font-size: 28px;
     color: #f5f1eb;
-    margin-bottom: 30px;
-    line-height: 1.5;
+    line-height: 1.32;
     font-weight: 600;
+    letter-spacing: 0.2px;
+    text-wrap: balance;
 }
 
 .logo-section {
@@ -103,12 +107,13 @@ body {
 
 .card-side-image {
     position: absolute;
-    top: 24px;
+    top: -28px;
     bottom: 24px;
     width: 116px;
-    height: calc(100% - 48px);
+    height: calc(100% + 4px);
     object-fit: contain;
-    object-position: center;
+    object-position: top center;
+    mix-blend-mode: multiply;
     opacity: 0;
     pointer-events: none;
     z-index: 0;
@@ -526,9 +531,10 @@ body {
     }
 
     .tagline {
-        font-size: 20px;
+        font-size: 24px;
         margin-bottom: 18px;
-        line-height: 1.35;
+        line-height: 1.28;
+        letter-spacing: 0;
     }
 
     .logo-section {
@@ -565,10 +571,10 @@ body {
     }
 
     .card-side-image {
-        top: 52px;
+        top: -22px;
         bottom: 52px;
         width: 62px;
-        height: calc(100% - 104px);
+        height: calc(100% - 30px);
         opacity: 0;
         filter: saturate(0.95);
         animation-duration: 0.85s;
@@ -750,8 +756,9 @@ body {
     }
 
     .tagline {
-        font-size: 18px;
+        font-size: 22px;
         margin-bottom: 14px;
+        line-height: 1.26;
     }
 
     .logo-section {
@@ -770,10 +777,10 @@ body {
     }
 
     .card-side-image {
-        top: 44px;
+        top: -18px;
         bottom: 44px;
         width: 44px;
-        height: calc(100% - 88px);
+        height: calc(100% - 26px);
     }
 
     .card-side-left {
