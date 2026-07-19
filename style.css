@@ -425,31 +425,62 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .card-content {
+        min-height: auto;
+    }
+
     .card-wrapper {
         flex-direction: column;
+        position: relative;
     }
 
     .side-banner {
         width: 100%;
-        height: 60px;
+        height: 50px;
         flex-direction: row;
         justify-content: center;
-        gap: 30px;
-        border-right: none;
-        border-bottom: 3px solid rgba(212, 175, 111, 0.3);
+        align-items: center;
+        gap: 20px;
+        padding: 15px 10px !important;
+        border-right: none !important;
+        border-bottom: 2px solid #d4af6f !important;
+        border-left: none !important;
+    }
+
+    .side-banner::before,
+    .side-banner::after {
+        display: none !important;
     }
 
     .side-banner.right-banner {
-        border-left: none;
+        border-left: none !important;
+        order: 3;
+    }
+
+    .side-banner.left-banner {
+        order: 1;
+    }
+
+    .card-inner {
+        padding: 30px 20px;
+        order: 2;
     }
 
     .banner-text {
         writing-mode: horizontal-tb;
         text-orientation: initial;
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        margin: 0;
     }
 
-    .card-inner {
-        padding: 30px 20px;
+    .banner-subtext {
+        display: none;
+    }
+
+    .banner-year {
+        font-size: 14px;
     }
 
     .graduate-name {
@@ -477,23 +508,38 @@ body {
     }
 
     .btn-sound {
-        right: 15px;
-        width: 50px;
-        height: 50px;
-        font-size: 22px;
-        bottom: 25px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15px;
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+    }
+
+    .btn-sound:hover {
+        transform: translateX(-50%) scale(1.1);
     }
 
     .btn-close-card {
+        top: 10px;
+        right: 10px;
         width: 36px;
         height: 36px;
+        font-size: 24px;
     }
-}
 }
 
 @media (max-width: 480px) {
     .side-banner {
-        gap: 20px;
+        height: 45px;
+        gap: 15px;
+        padding: 12px 8px !important;
+    }
+
+    .banner-text {
+        font-size: 10px;
+        letter-spacing: 0.5px;
     }
 
     .card-inner {
@@ -521,7 +567,7 @@ body {
     }
 
     .date-month {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .time {
@@ -537,18 +583,23 @@ body {
     }
 
     .btn-sound {
-        right: 12px;
-        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 12px;
         width: 48px;
         height: 48px;
         font-size: 20px;
     }
 
+    .btn-sound:hover {
+        transform: translateX(-50%) scale(1.1);
+    }
+
     .btn-close-card {
-        top: 15px;
-        right: 12px;
+        top: 8px;
+        right: 8px;
         width: 32px;
         height: 32px;
-        font-size: 24px;
+        font-size: 22px;
     }
 }
