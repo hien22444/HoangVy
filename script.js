@@ -1,3 +1,5 @@
+let isSoundMuted = false;
+
 function openCard() {
   const cover = document.getElementById("cover");
   const cardContent = document.getElementById("cardContent");
@@ -12,6 +14,13 @@ function closeCard() {
 
   cover.style.display = "block";
   cardContent.style.display = "none";
+}
+
+function toggleSound() {
+  const button = document.querySelector(".btn-sound");
+  isSoundMuted = !isSoundMuted;
+  button.textContent = isSoundMuted ? "🔇" : "🔊";
+  // Thêm logic phát nhạc nếu cần
 }
 
 // Add click event to cover

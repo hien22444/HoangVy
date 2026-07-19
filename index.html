@@ -13,7 +13,7 @@
             <div class="cover-content">
                 <h1 class="tagline">Một chương đã khép lại,<br>một hành trình mới bắt đầu</h1>
                 <div class="logo-section">
-                    <img src="assets/logo.png" alt="Logo trường" class="school-logo">
+                    <img src="assets/logo1.png" alt="Logo trường" class="school-logo">
                 </div>
                 <h2 class="school-name">TRƯỜNG ĐẠI HỌC NGOẠI NGỮ<br>ĐẠI HỌC ĐÀ NẴNG</h2>
                 <h3 class="event-title">Graduation Ceremony</h3>
@@ -23,36 +23,52 @@
 
         <!-- Card Content -->
         <section class="card-content" id="cardContent" style="display: none;">
-            <div class="card-inner">
-                <div class="header-section">
-                    <h1 class="tagline">Một chương đã khép lại,<br>một hành trình mới bắt đầu</h1>
+            <div class="card-wrapper">
+                <div class="side-banner left-banner">
+                    <div class="banner-text">UFLS</div>
+                    <div class="banner-subtext">K22</div>
+                </div>
+
+                <div class="card-inner">
+                    <div class="header-logo">
+                        <img src="assets/logo1.png" alt="Logo trường" class="card-logo">
+                    </div>
+
+                    <h3 class="event-title-card">Graduation Ceremony</h3>
+
+                    <div class="name-section">
+                        <h2 class="graduate-name">Ngô Thị Hoàng Vy</h2>
+                    </div>
+
                     <p class="quote">Hy vọng trong bức tranh thanh xuân của tớ<br>sẽ có sự góp mặt của cậu</p>
-                </div>
 
-                <div class="name-section">
-                    <h2 class="graduate-name">Ngô Thị Hoàng Vy</h2>
-                </div>
-
-                <div class="details-section">
-                    <div class="detail-item">
-                        <h3>NGÀY</h3>
-                        <p class="day">THỨ BẢY</p>
-                        <p class="date">JULY <span class="number">25</span></p>
+                    <div class="datetime-section">
+                        <div class="date-row">
+                            <span class="day-name">THỨ BẢY</span>
+                            <span class="date-divider">—</span>
+                            <span class="date-month">JULY</span>
+                            <span class="date-number">25</span>
+                            <span class="date-divider">—</span>
+                            <span class="time">09:30</span>
+                        </div>
+                        <div class="year">2026</div>
                     </div>
-                    <div class="detail-item">
-                        <h3>GIỜ</h3>
-                        <p class="time">09:30</p>
+
+                    <div class="location-section">
+                        <h3 class="location-title">LOCATION</h3>
+                        <p class="location-name">Trường Đại học Ngoại ngữ – Đại học Đà Nẵng</p>
+                        <p class="location-address">131 Lương Nhữ Hộc, Cẩm Lệ, Đà Nẵng</p>
+                        <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+Ngo%E1%BA%A1i+ng%E1%BB%AF+%C4%83+N%E1%BA%A7ng+-+C%C6%A1+s%E1%BB%9F+2/@16.0347395,108.2112724,18z/" target="_blank" class="btn-direction">🧭 CHỈ ĐƯỜNG</a>
                     </div>
                 </div>
 
-                <div class="location-section">
-                    <h3>LOCATION</h3>
-                    <p class="location-name">Trường Đại học Ngoại ngữ – Đại học Đà Nẵng</p>
-                    <p class="location-address">131 Lương Nhữ Hộc, Cẩm Lệ, Đà Nẵng</p>
-                    <a href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+Ngo%E1%BA%A1i+ng%E1%BB%AF+%C4%83+N%E1%BA%A7ng+-+C%C6%A1+s%E1%BB%9F+2/@16.0347395,108.2112724,18z/" target="_blank" class="btn-direction">CHỈ ĐƯỜNG</a>
+                <div class="side-banner right-banner">
+                    <div class="banner-text">KỲ TỐT NGHIỆP<br>HÀNG NĂM</div>
+                    <div class="banner-year">2026</div>
                 </div>
 
-                <button class="btn-back" onclick="closeCard()">← QUAY LẠI</button>
+                <button class="btn-sound" onclick="toggleSound()">🔊</button>
+                <button class="btn-close-card" onclick="closeCard()">×</button>
             </div>
         </section>
     </div>
