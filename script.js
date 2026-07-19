@@ -11,6 +11,8 @@ function openCard() {
 
   cover.style.display = "none";
   cardContent.style.display = "block";
+  document.body.classList.add("card-open");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   // Phát nhạc khi mở thiệp
   if (bgMusic && !isSoundMuted) {
@@ -27,6 +29,8 @@ function closeCard() {
 
   cover.style.display = "block";
   cardContent.style.display = "none";
+  document.body.classList.remove("card-open");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   // Dừng nhạc khi đóng thiệp
   if (bgMusic) {
