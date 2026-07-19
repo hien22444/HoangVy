@@ -238,34 +238,22 @@ body {
     text-align: center;
 }
 
-.date-row {
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-    letter-spacing: 2px;
+.date-column {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.date-item {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    gap: 0;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.date-row > span {
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    position: relative;
-}
-
-.date-row > span:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    height: 20px;
-    width: 1px;
-    background: #d4af6f;
-    opacity: 0.6;
+.date-item.year-item {
+    margin-top: 5px;
 }
 
 .date-divider {
@@ -274,44 +262,36 @@ body {
 
 .day-name {
     color: #333;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .date-month {
     color: #d4af6f;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .date-number {
-    font-size: 44px;
+    font-size: 48px;
     color: #8b3a34;
     font-weight: 700;
     line-height: 1;
-    padding: 0 12px !important;
-}
-
-.date-number::after {
-    display: none !important;
 }
 
 .time {
     color: #8b3a34;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 1px;
 }
 
-.time::after {
-    display: none !important;
-}
-
 .year {
-    font-size: 16px;
+    font-size: 14px;
     color: #8b3a34;
-    margin-top: 8px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-weight: 600;
 }
 
@@ -369,43 +349,57 @@ body {
 /* Action Buttons */
 .btn-sound {
     position: absolute;
-    bottom: 20px;
-    right: 80px;
-    width: 50px;
-    height: 50px;
+    bottom: 30px;
+    right: 100px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    background: #3d4d5c;
+    background: linear-gradient(135deg, #8b3a34 0%, #6b2a2a 100%);
     border: 2px solid #d4af6f;
-    font-size: 24px;
+    font-size: 26px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 15px rgba(139, 58, 52, 0.25);
 }
 
 .btn-sound:hover {
-    background: #6b3b3b;
-    transform: scale(1.1);
+    background: linear-gradient(135deg, #6b2a2a 0%, #8b3a34 100%);
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 6px 20px rgba(139, 58, 52, 0.4);
+    border-color: #f5f1eb;
+}
+
+.btn-sound:active {
+    transform: scale(0.95);
 }
 
 .btn-close-card {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 35px;
-    height: 35px;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
     border: none;
-    background: transparent;
+    background: #f5f1eb;
     color: #8b3a34;
     font-size: 28px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-close-card:hover {
-    color: #6b2a2a;
-    transform: scale(1.2);
+    color: #f5f1eb;
+    background: #8b3a34;
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Animations */
@@ -467,21 +461,34 @@ body {
     }
 
     .date-number {
-        font-size: 32px;
+        font-size: 36px;
     }
 
-    .date-row {
-        gap: 0;
+    .date-item {
+        gap: 6px;
     }
 
-    .date-row > span {
-        padding: 0 10px;
-        font-size: 13px;
+    .day-name {
+        font-size: 12px;
+    }
+
+    .time {
+        font-size: 16px;
     }
 
     .btn-sound {
-        right: 20px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        bottom: 25px;
     }
+
+    .btn-close-card {
+        width: 36px;
+        height: 36px;
+    }
+}
 }
 
 @media (max-width: 480px) {
@@ -502,22 +509,46 @@ body {
     }
 
     .date-number {
-        font-size: 28px;
+        font-size: 32px;
     }
 
-    .date-row {
+    .date-item {
+        gap: 4px;
+    }
+
+    .day-name {
+        font-size: 11px;
+    }
+
+    .date-month {
+        font-size: 11px;
+    }
+
+    .time {
+        font-size: 14px;
+    }
+
+    .year {
         font-size: 12px;
-    }
-
-    .date-row > span {
-        padding: 0 8px;
     }
 
     .quote {
         font-size: 12px;
     }
 
-    .year {
-        font-size: 14px;
+    .btn-sound {
+        right: 12px;
+        bottom: 20px;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .btn-close-card {
+        top: 15px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 24px;
     }
 }
