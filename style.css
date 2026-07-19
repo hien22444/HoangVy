@@ -87,10 +87,11 @@ body {
     background: linear-gradient(180deg, #f5f1eb 0%, #faf7f2 100%);
     border-radius: 0;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    animation: slideInUp 0.6s ease;
+    animation: cardOpen 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
     padding: 0;
     position: relative;
-    min-height: 600px;
+    height: auto;
+    min-height: auto;
 }
 
 .card-wrapper {
@@ -184,7 +185,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow-y: auto;
+    overflow-y: visible;
 }
 
 .header-logo {
@@ -414,6 +415,17 @@ body {
     }
 }
 
+@keyframes cardOpen {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
 @keyframes pulse {
     0%, 100% {
         opacity: 0.6;
@@ -425,10 +437,6 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .card-content {
-        min-height: auto;
-    }
-
     .card-wrapper {
         flex-direction: column;
         position: relative;
