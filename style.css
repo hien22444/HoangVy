@@ -188,8 +188,24 @@ body {
     overflow-y: visible;
 }
 
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-inner > * {
+    animation: fadeInDown 0.6s ease-out forwards;
+}
+
 .header-logo {
     margin-bottom: 30px;
+    animation-delay: 0.1s;
 }
 
 .card-logo {
@@ -197,6 +213,8 @@ body {
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
+    animation: fadeInDown 0.6s ease-out forwards;
+    animation-delay: 0.15s;
 }
 
 .event-title-card {
@@ -206,10 +224,12 @@ body {
     margin-bottom: 30px;
     letter-spacing: 2px;
     font-style: italic;
+    animation-delay: 0.2s;
 }
 
 .name-section {
     margin: 30px 0;
+    animation-delay: 0.3s;
 }
 
 .graduate-name {
@@ -220,6 +240,8 @@ body {
     letter-spacing: 2px;
     font-style: italic;
     margin: 0;
+    animation: fadeInDown 0.6s ease-out forwards;
+    animation-delay: 0.35s;
 }
 
 .quote {
@@ -228,15 +250,16 @@ body {
     line-height: 1.6;
     font-style: italic;
     margin: 20px 0 30px 0;
+    animation-delay: 0.4s;
 }
 
-/* DateTime Section */
 .datetime-section {
     margin: 35px 0;
     padding: 25px 0;
     border-top: 1px solid #d4af6f;
     border-bottom: 1px solid #d4af6f;
     text-align: center;
+    animation-delay: 0.5s;
 }
 
 .date-column {
@@ -301,6 +324,7 @@ body {
     margin: 30px 0;
     padding: 20px 0;
     border-top: 2px solid #d4af6f;
+    animation-delay: 0.6s;
 }
 
 .location-title {
